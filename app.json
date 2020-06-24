@@ -2,6 +2,8 @@
   "expo": {
     "name": "expo1",
     "slug": "expo1",
+    "scheme": "myapp",
+    
     "platforms": [
       "ios",
       "android",
@@ -15,6 +17,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    
     "updates": {
       "fallbackToCacheTimeout": 0
     },
@@ -23,6 +26,23 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [{
+            "scheme": "myapp"
+          }],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ],
+
     }
+ 
   }
 }
